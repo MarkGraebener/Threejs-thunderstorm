@@ -1,0 +1,74 @@
+*{
+margin: 0;
+    padding: 0;
+}
+.background {
+
+    display: flex;
+    position: fixed;
+    content: "";
+    /*position: absolute;*/
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    /*why dosnt this work?*/
+    transform: scaleY(-1);
+    /*opacity: .3;*/
+    /*background: url(https://3.bp.blogspot.com/-k-p2DsWaMBw/UACnOLxFwDI/AAAAAAAAHcs/7Ke10d4SXtE/s1600/M101_nasaMultiW_n.jpg) 0 0 repeat;*/
+    /*-webkit-transform: rotate(30deg);*/
+}
+.rotating {
+    -webkit-animation: rotating-function 500s linear infinite;
+    -moz-animation: rotating-function 500s linear infinite;
+    -ms-animation: rotating-function 500s linear infinite;
+    -o-animation: rotating-function 500s linear infinite;
+    animation: rotating-function 500s linear infinite;
+}
+
+@-webkit-keyframes rotating-function {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotating-function {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes rotating-function {
+    from {
+        -ms-transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotating-function {
+    from {
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotating-function {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
