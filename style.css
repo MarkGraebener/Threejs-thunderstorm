@@ -1,83 +1,61 @@
-*{
-margin: 0;
+* {
+    margin: 0;
     padding: 0;
+    /* box-sizing: border-box; */
 }
+
 body {
     background: black;
-    /*position: relative;*/
+    /* overflow: hidden; */
 }
 
-/*    background-image: url('https://i.pinimg.com/originals/d3/64/cc/d364ccd53ec38e5579134745d82f22bd.jpg');*/
-/*    background-repeat: no-repeat;*/
-/*    background-attachment: fixed;*/
-/*    background-position: center;*/
+.window {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* z-index: 4; */
+    /* position: relative;
+    top: 5%;
+    left: 50%; */
+    backdrop-filter: blur(1rem);
+    border-radius: 20px;
+    margin: 60px 0;
+}
 
-/*}*/
-/*height: 100%;*/
-/*width: 100%;*/
-/*padding: 0;*/
-/*margin: 0;*/
-/*background: black url(back2.png) center center no-repeat;;*/
-/*-webkit-background-size: cover;*/
-/*-moz-background-size: cover;*/
-/*-o-background-size: cover;*/
-/*background-size: cover;*/
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 30;
 
+}
+
+/* -------------BACKGROUND ------- */
 .background {
     height: 100%;
     width: 100%;
     display: flex;
-    /*position: absolute;*/
-    /*position: fixed;*/
-    /*content: "";*/
-    /*position: absolute;*/
-    /*width: 300%;*/
-    /*width: auto;*/
-    /*height: 100%;*/
-    /*z-index: 1;*/
-position: absolute;
-    /*top: -100%;*/
-    /*left: -50%;*/
-    /*margin: 0 auto;*/
-    /*why dosnt this work?*/
-    /*transform: scaleY(-1);*/
-    /*opacity: .3;*/
-    /*background: url(https://3.bp.blogspot.com/-k-p2DsWaMBw/UACnOLxFwDI/AAAAAAAAHcs/7Ke10d4SXtE/s1600/M101_nasaMultiW_n.jpg) 0 0 repeat;*/
-    /*-webkit-transform: rotate(30deg);*/
+    position: fixed;
+    overflow: hidden;
+
 }
-.bg-img{
+
+.bg-img {
     align-items: center;
     justify-content: center;
     position: absolute;
-        /*align-items: center;*/
-    /*width: auto;*/
-    /*height: 300%;*/
-    /*margin: auto 0;*/
-    /*position: fixed;*/
-    /*border-radius: 50%;*/
-    /*bottom: 1000px;*/
-    /*right: 1000px;*/
-    /*transform: scalex(-1);*/
-    /*overflow: scroll;*/
-    /*z-index: 2;*/
-    /*padding: 20px 20px;*/
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
-    /*background: url(https://static-ssl.businessinsider.com/image/5cace7b5c6cc5071b03342f3-1448/event-horizon-telescope-black-hole-simulated-picture-image-accretion-disk-top-2.jpg) center center no-repeat;;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /*transform-origin: center;*/
-    /*background-repeat: no-repeat;*!*/
-    /*    background-attachment: fixed;*/
-    /*    background-position: center;*/
-
-
+    overflow: hidden;
 
 }
+
 .rotating {
     -webkit-animation: rotating-function 100s linear infinite;
     -moz-animation: rotating-function 100s linear infinite;
@@ -92,6 +70,7 @@ position: absolute;
     from {
         -webkit-transform: rotate(0deg);
     }
+
     to {
         -webkit-transform: rotate(-360deg);
     }
@@ -101,6 +80,7 @@ position: absolute;
     from {
         -moz-transform: rotate(0deg);
     }
+
     to {
         -moz-transform: rotate(-360deg);
     }
@@ -110,6 +90,7 @@ position: absolute;
     from {
         -ms-transform: rotate(0deg);
     }
+
     to {
         -ms-transform: rotate(-360deg);
     }
@@ -119,6 +100,7 @@ position: absolute;
     from {
         -o-transform: rotate(0deg);
     }
+
     to {
         -o-transform: rotate(-360deg);
     }
@@ -128,42 +110,38 @@ position: absolute;
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(-360deg);
     }
 }
-nav{
-    position: fixed;
+
+nav {
+    display: flex;
     color: white;
     align-items: center;
     left: 40%;
-
+    z-index: 40;
 }
 
-.nav_bar{
+.nav_bar {
     display: flex;
-    /*justify-content: space-between;*/
     gap: 25%;
 }
 
-/*.nav_bar > a{*/
-/*    text-decoration: none;*/
-/*    color: white;*/
-/*}*/
+
 
 a {
     text-decoration: none;
     color: white;
     margin-top: 10px;
-    /*text-align: center;*/
 }
 
 
-a:hover{
-    /*font-size: 80px;*/
+a:hover {
     color: #fff;
     text-align: center;
-    animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 500ms ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes glow {
@@ -175,12 +153,5 @@ a:hover{
         text-shadow: 0 0 20px #fff, 0 0 30px #f10707, 0 0 40px #ff0000, 0 0 50px #f10202, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     }
 }
-/*@-webkit-keyframes glow {*/
-/*    from {*/
-/*        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;*/
-/*    }*/
 
-/*    to {*/
-/*        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;*/
-/*    }*/
-/*}*/
+/* ------------------------------- */
